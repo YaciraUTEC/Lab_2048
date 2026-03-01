@@ -8,7 +8,7 @@ class Agent:
 
     def __init__(self, seed: Optional[int] = None) -> None:
         self.rng = np.random.default_rng(seed)
-        self.search_depth = 4 
+        self.search_depth = 2
 
         self.W_EMPTY     = 100.0
         self.W_SMOOTH    = 3.0
@@ -263,4 +263,5 @@ class Agent:
             for c in range(board.shape[1]):
                 if board[r, c] == board[r + 1, c]:
                     return False
+
         return True
